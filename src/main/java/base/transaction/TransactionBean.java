@@ -12,6 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Component
 public class TransactionBean {
 
+    private NestedBean nestedBean;
+
     public NestedBean getNestedBean() {
         return nestedBean;
     }
@@ -19,8 +21,6 @@ public class TransactionBean {
     public void setNestedBean(NestedBean nestedBean) {
         this.nestedBean = nestedBean;
     }
-
-    private NestedBean nestedBean;
 
     @Transactional(propagation = Propagation.REQUIRED)
     public void process() {

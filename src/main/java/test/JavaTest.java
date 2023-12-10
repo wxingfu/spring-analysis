@@ -19,14 +19,6 @@ import java.util.Enumeration;
  */
 public class JavaTest {
 
-    private class MyList extends ArrayList {
-
-        @Override
-        public String get(int index) {
-            return "";
-        }
-    }
-
     public static void main(String[] args) {
         for (Method method : MyList.class.getDeclaredMethods()) {
             System.out.println("name: " + method.getName() + ", return: " + method.getReturnType());
@@ -63,6 +55,14 @@ public class JavaTest {
         System.out.println(arr);
         System.out.println("月份: " + arr[2]);
         System.out.println("天气: " + arr[4]);
+    }
+
+    private class MyList extends ArrayList {
+
+        @Override
+        public String get(int index) {
+            return "";
+        }
     }
 
 }

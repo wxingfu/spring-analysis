@@ -26,7 +26,7 @@ public class CacheDemo {
         System.out.println(cache.get("China"));
         cache.put("US", "US");
         System.out.println(cache.get("US"));
-        //放不进去
+        // 放不进去
         cache.put("UK", "UK");
     }
 
